@@ -1,0 +1,6 @@
+---
+- name: Install Xephyr
+  become: true
+  ansible.builtin.dnf:
+    name: xorg-x11-server-Xephyr
+    state: latest

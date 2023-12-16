@@ -1,0 +1,10 @@
+- name: Create a directory
+  ansible.builtin.file:
+    path: "{{ src_dir }}"
+    state: directory
+
+- name: Git checkout
+  ansible.builtin.git:
+    repo: "{{ this_git_repo }}"
+    dest: "{{ repo_dir }}"
+  notify: run Ansible
